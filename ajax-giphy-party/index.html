@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Giphy Party!</title>
+</head>
+
+<body>
+<div class="container">
+  <h1 class="text-center mt-4 mb-4">GIPHY PARTY</h1>
+  <form class="form-inline d-flex justify-content-center mb-4">
+    <input type="text" id="search" name="search" placeholder="Key Word" class="form-control mr-2"/>
+    <input type="submit" class="btn btn-secondary" value="Search Giphy"/>
+    <button id="remove" class="btn btn-danger ml-2">Remove Image</button>
+  </form>
+  <div id="gif-board" class="row"></div>
+</div>
+<script src="https://code.jquery.com/jquery-3.2.1.js"></script>
+<!--This code is causing a navigaor.userAgent issue <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>-->
+<script src="app.js"></script>
+</body>
+
+</html>
