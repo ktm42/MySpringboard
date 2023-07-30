@@ -1,0 +1,33 @@
+What is hTTP?
+    Hypertext Transfer Protocol, protocol for getting resources such as HTML documents
+
+What is URL?
+    Universal Resource Locators
+
+What is DNS?
+    Domain Name System
+
+What is a query string?
+    The portion of the URL where data is passed to a web application and/or back-end database
+
+List two HTTP verbs and their use cases.
+    Get: retreives a list of items
+    Post: creates an item/submits an entry to the specified resource and often changes the state of the server or side effects on the server
+
+What is an HTTP request?
+    A request/message sent by a client to the user-agent/server
+
+What is an HTTP response?
+    The answer sent by the server that received the request
+
+Waht is an HTTP header?
+    Headers describe a resoure and are kept in an IANA registry. Headers let the client and the server pass additional information with an HTTP request or response.
+    Ex. Request: Host, Cookie, Accept
+        Response: Content-Type, Set-Cookie, Last-Modified
+
+What happens when you type a URL in a browser?
+    ~The URL sends a request to the DNS server
+    ~Server sends a response containing the IP address of the hosting web server
+    ~Browswer initiates a connection between it and the server then sends a Get request
+    ~Server handles the request and sends a response 
+    ~Broswer displays the HTML content by making repeat Get requests to render all the embedded information

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-3.7.0.min.js"
+    integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g="
+    crossorigin="anonymous"></script>
+    <script src = 'moviesapp.js'></script>
+</head>
+<body>
+    <hi>Rate 'Em</hi>
+
+    <form id="submitTitle">
+        <input type = "text" placeholder="Movie Title" id = "movieTitle">
+
+        <div class="slider">
+            <input type="range" id="rangeValue" min="0" max="10" value="0" oninput="rating.innerText = this.value">
+            <p id="rating"></p>
+        </div>
+        
+        <input type = "submit">
+    </form>
+
+    <p>
+        <ul id = movies>
+        </ul>
+    </p>  
+    <p>
+        
+    </p>  
+
+</body>
+</html>
