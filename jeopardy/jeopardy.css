@@ -1,0 +1,35 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: grey;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#jeopardy {
+text-align: center;
+font-size: 10pt;
+color: white; 
+background-color: #060ce9;
+border: solid 1px;
+border-color: black;
+}
+
+th, td {
+  height: 100px;
+  width: 150px;
+  background-color: darkblue;
+  text-align: center;
+  font-size: 14pt;
+  border-left: solid blue 10px;
+  border-right: solid black 10px;
+  border-top: solid blue 10px;
+  border-bottom: solid black 10px;
+  margin: 5px;
+  padding: 10px;
+  line-height: 120px;
+}
