@@ -32,7 +32,7 @@ class Post(db.Model):
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.Text, nullable=False)
     content = db.Column(db.Text, nullable=False)
-    created = db.Column(db.DateTime, nullable=False, default=datetime, datetime.now)
+    created = db.Column(db.DateTime, nullable=False, default=datetime.datetime.now)
     user_id = db.Column(db.Integer, db.ForgeignKey('users.id'), nullable=False)
 
     @property
@@ -41,11 +41,27 @@ class Post(db.Model):
 
         return self.created.strftime("%a %b %-d %Y, %-I:%M %p")
 
+class PostTag(db.Model):
+    """Placing a tag on a post"""
 
- def connect_db(app):
+    __tablename__="posts_tags"
+
+    post_id = db.Coumn(db.Integer, db.ForeignKey('posts.id'), primary_key=True)
+    tag_id = db.Column(db.Integer, db.ForeignKey('tags.id'), primary_key=True)
+
+class Tag(db.Model):
+    """Tags that can be added to posts"""
+
+    __tablename__ = 'tags'
+
+    id = db.Column(db.Integer, primary_key=True)
+    name = db.Column (de.Text, nullable=False, unique=True)
+
+    posts = db.relationship('Post', secondary = "posts_tags", backref="tags")
+
+
+def connect_db(app):
     """Connects database to Flask app"""
 
     db.app = app
     db.init_app(app)
-
-
