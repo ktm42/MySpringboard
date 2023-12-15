@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
-const ExpressError = require('./expressError');
+const ExpressError = require('../expressError');
 
-const { convertAndValidateNumsArray, findMode, findMean, findMedian } = require('./helpers');
+const { convertAndValidateNumsArray, findMode, findMean, findMedian } = require('../helpers');
 
 app.get('/mean', function(req, res, next) {
     if (!req.query.nums) {
